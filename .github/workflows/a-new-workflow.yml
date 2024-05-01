@@ -1,0 +1,8 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  print-string:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "A new workflow is running"
