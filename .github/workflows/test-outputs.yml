@@ -11,4 +11,10 @@ jobs:
     steps:
       - id: step1
         run: echo "var1=Hello World" >> "$GITHUB_OUTPUT"
-      - run: echo "$var1"
+      - run: echo "output1 is ${{ steps.step1.outputs.var1 }}
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo "Accessing the output from a dependent job - ${{needs.job1.outputs.output1}}"
