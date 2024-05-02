@@ -1,4 +1,4 @@
-name: Outputs Workflow 1
+name: test_outputs
 
 on:
   workflow_dispatch:
