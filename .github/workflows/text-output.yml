@@ -17,5 +17,3 @@ jobs:
         run: |
           echo "num1=(cat numbers.txt)" >> "$GITHUB_OUTPUT"
           echo "Output is: ${{ steps.store-file-text.outputs.num1 }}"
-          echo "my-num is: ${{ my-num }}"
-  
