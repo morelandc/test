@@ -7,7 +7,7 @@ jobs:
   store-from-file:
     runs-on: ubuntu-latest
     outputs:
-      my-num: ${{ step.store-file-text.outputs.num1 }}
+      my-num: ${{ steps.store-file-text.outputs.num1 }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
