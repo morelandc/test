@@ -1,4 +1,4 @@
-hname: text-output
+name: text-output
 
 on:
   workflow_dispatch:
