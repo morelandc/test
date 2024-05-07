@@ -5,13 +5,13 @@ on:
 
 jobs:
   store-from-file:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     outputs:
       my-num: ${{ step.step1.outputs.num1 }}
     steps:
-      -name: Checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           repository: morelandc/text-file
-      -id: store-file-text
+      - id: store-file-text
         run: |
