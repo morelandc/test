@@ -16,5 +16,5 @@ jobs:
       - id: store-file-text
         run: |
           echo "num1=(cat numbers.txt)" >> "$GITHUB_OUTPUT"
-          echo {{ steps.step1.outputs.num1 }}
+          echo {{ steps.store-file-text.outputs.num1 }}
   
