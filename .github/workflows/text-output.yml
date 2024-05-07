@@ -15,5 +15,5 @@ jobs:
           repository: morelandc/text-file
       - id: store-file-text
         run: |
-          echo "num1=(cat numbers.txt)" >> "$GITHUB_OUTPUT"
+          echo "num1=$(cat numbers.txt)" >> "$GITHUB_OUTPUT"
           echo "Output is: ${{ steps.store-file-text.outputs.num1 }}"
