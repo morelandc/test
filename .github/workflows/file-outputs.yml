@@ -19,6 +19,6 @@ jobs:
         with:
           repository: morelandc/java-program
       - name: Run Java file
-        run: java Main.java
+        run: java ./src/Main.java
           
         
