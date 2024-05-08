@@ -18,7 +18,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: morelandc/java-program
-      - name: Run Java file
-        run: java ./src/Main.java
-          
-        
+      - name: Store file output
+        id: store-output
+        run: echo "srt1=$(java ./src/Main.java)" >> "$GITHUB_OUTPUT"
+      - name: Access output
+        run: echo "Greeting is ${{ steps.store-output.outputs.output1 }}
