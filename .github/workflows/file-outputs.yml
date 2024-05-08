@@ -33,5 +33,5 @@ jobs:
         with:
           repository: morelandc/java-files
       - name: Pass output as parameter
-        run: java check-string.java ${{ needs.store-from-file.outputs.output1 }}
+        run: java check-string.java "${{ needs.store-from-file.outputs.output1 }}"
       
