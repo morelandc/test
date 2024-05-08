@@ -7,7 +7,7 @@ jobs:
   store-from-file:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ step.step1.outputs.str1 }}
+      output1: ${{ steps.step1.outputs.str1 }}
     steps:
       - name: Setup Java
         uses: actions/setup-java@v4
