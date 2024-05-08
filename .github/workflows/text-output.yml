@@ -7,11 +7,12 @@ jobs:
   store-from-file:
     runs-on: ubuntu-latest
     outputs:
-      my-num: ${{ step.store-file-text.outputs.num1 }}
+      my-num: ${{ steps.store-file-text.outputs.num1 }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           repository: morelandc/text-file
       - id: store-file-text
-        run: |
+        run: echo "num1=$(cat numbers.txt)" >> "$GITHUB_OUTPUT"
+      - name: Print output

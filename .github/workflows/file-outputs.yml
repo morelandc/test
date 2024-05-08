@@ -5,13 +5,19 @@ on:
 
 jobs:
   store-from-file:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     outputs:
-      my-num: ${{ step.step1.outputs.num1 }}
+      output1: ${{ step.step1.outputs.str1 }}
     steps:
-      -name: Checkout repo
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+      - name: Checkout repo
         uses: actions/checkout@v4
-      -id: store-file-output
-        run: |
+        with:
+          repository: morelandc/java-program
+      - name: Run Java file
+        run: java Main.java
           
         
