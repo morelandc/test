@@ -22,4 +22,4 @@ jobs:
         id: store-output
         run: echo "srt1=$(java ./src/Main.java)" >> "$GITHUB_OUTPUT"
       - name: Access output
-        run: echo "Greeting is ${{ steps.store-output.outputs.output1 }}
+        run: echo "Greeting is ${{ steps.store-output.outputs.output1 }}"
