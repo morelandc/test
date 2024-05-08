@@ -5,9 +5,9 @@ on:
 
 jobs:
   store-from-file:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     outputs:
-      my-num: ${{ step.step1.outputs.num1 }}
+      output1: ${{ step.step1.outputs.str1 }}
     steps:
       - name: Setup Java
         uses: actions/setup-java@v4
