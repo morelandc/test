@@ -1,0 +1,4 @@
+name: file-outputs
+
+on:
+  workflow_dispatch:
