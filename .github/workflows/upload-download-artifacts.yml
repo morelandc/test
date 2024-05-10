@@ -21,7 +21,7 @@ jobs:
           path: my_nums.txt
       - name: Display info
         run: |
-          echo "Runner: ${{ runner.os }}, Repo: ${{ github.repository }}, Branch: ${{ github.ref }}
+          echo "Runner: ${{ runner.os }}, Repo: ${{ github.repository }}, Branch: ${{ github.ref }}"
           ls ${{ github.workspace }}
 
   
