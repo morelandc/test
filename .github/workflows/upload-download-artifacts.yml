@@ -1,4 +1,4 @@
-name: file-outputs
+name: upload_download-artifacts
 
 on:
   workflow_dispatch:
